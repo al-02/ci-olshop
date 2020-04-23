@@ -1,19 +1,9 @@
 <div class="container-fluid">
-	<h3><i class="btn-primary btn-sm" class="fas fa-edit"></i>EDIT DATA BARANG</h3>
+	<h3><i class="fas fa-edit"></i>EDIT DATA BARANG</h3>
 
 	<?php foreach($barang as $brg) : ?>
-	<!-- Modal -->
-	<div class="modal fade" id="edit_barang" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-	  <div class="modal-dialog" role="document">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <h5 class="modal-title" id="exampleModalLabel">Form Input Produk</h5>
-	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	          <span aria-hidden="true">&times;</span>
-	        </button>
-	      </div>
-	      <div class="modal-body">
-	        <form action="<?php echo base_url(). 'admin/data_barang/update' ?>" method="post" >
+
+	        <form method="post" action="<?php echo base_url(). 'admin/data_barang/update' ?>">
 
 	        	<div class="form-group">
 	        		<label>Nama Barang</label>
@@ -41,11 +31,7 @@
 	        		<input type="text" name="stok" class="form-control" value="<?php echo $brg->stok ?>">
 	        	</div>
 
-	      </div>
-	      <div class="modal-footer">
-	        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-	        <button type="submit" class="btn btn-primary">Simpan</button>
-	      </div>
+	      <button type="submit" class="btn btn-primary btn-sm mt-3">Simpan</button>
 
 	     </form>
 	     
